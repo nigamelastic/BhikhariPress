@@ -1,0 +1,24 @@
+{
+  "name": "bhikharipress",
+  "version": "1.0.0",
+  "description": "a cypress implementation for searching and sending messages to potential houses in wg gesucht",
+  "main": "index.js",
+  "scripts": {
+    "jeher": "./node_modules/cypress/bin/cypress open"
+    
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigamelastic/BhikhariPress.git"
+  },
+  "author": "Kshitij Nigam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigamelastic/BhikhariPress/issues"
+  },
+  "homepage": "https://github.com/nigamelastic/BhikhariPress#readme",
+  "devDependencies": {
+    "cypress": "^3.1.3"
+  }
+}
