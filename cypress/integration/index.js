@@ -1,7 +1,8 @@
-var username ="nigamelastic@gmail.com"//"your username"
-var password = "ben10alienforce"//"your password"
+var username ="your username"
+var password = "your password"
 var city = "Wien"
 var maxRent= "500"
+var messageTemplate = "your custom message"
 describe('Sending ', function() {
     context('Running Before Class', function() {
         before(function() {
@@ -34,11 +35,13 @@ describe('Sending ', function() {
             //cy.get('#autocompinp').type("enter")
             //cy.get('#autocompinp').type()
             cy.get('#rMax').type(maxRent);
-            cy.get('#offer_filter_form > div:nth-child(9) > div.col-sm-12.col-md-4 > button.filter_submit_button.btn.btn-info.btn-md.hidden-xs').click()
+            cy.get('#offer_filter_form > div:nth-child(9) > div.col-sm-12.col-md-4 > button.filter_submit_button.btn.btn-info.btn-md.hidden-xs').click();
             cy.get('h4 > a.detailansicht').each(($el, index, $list) =>{
               cy.wrap($el).click();
-              
-  
+              cy.get('#rhs_column > div.panel.panel-rhs-default.rhs_contact_information.hidden-sm > div.panel-body > div > div:nth-child(15) > a').click();
+              cy.get('#message_input').type(messageTemplate)
+              cy.get('#messenger_form > div > div.hidden-xs > button.btn.btn-info.pull-right.create_new_conversation').click();
+              cy.go('back');
             })
           })
     });
